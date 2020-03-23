@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show, :create, :update]
   resources :posts, only: [:index, :show]
-  resources :post_views, only: [:index, :show, :update]
+  resources :post_views, only: [:index, :show, :create, :update]
+  get '/posts/filter/:id', to: 'posts#filter'
 end

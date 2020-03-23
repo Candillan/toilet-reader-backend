@@ -9,15 +9,20 @@ class PostViewsController < ApplicationController
         render json: post_view
     end
 
+    def create
+        post_view = PostView.create(post_view_params)
+        render json: post_view
+    end
+
     def update
         post_view = PostView.find(params[:id])
         post_view.update(post_view_params)
-        render json: user
+        render json: post_view
     end
 
     private 
 
     def post_view_params
-        params.require(:post_view).permit(:like)
+        params.require(:post_view).permit(:user_id, :post_id, :like)
     end
 end
