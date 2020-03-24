@@ -4,10 +4,10 @@ class Post < ApplicationRecord
     belongs_to :category
 
 
-    def filtered_posts(user_id)
+    def self.filtered_posts(user_id)
         user = User.find(user_id)
         category_array = user.categories.map do |category|
-            return category.id
+            category.id
         end
         posts = Post.all
         filtered_posts = posts.select do |post|
@@ -17,7 +17,7 @@ class Post < ApplicationRecord
                     included = true
                 end
             end
-            return included
+            included
         end
         return filtered_posts
     end

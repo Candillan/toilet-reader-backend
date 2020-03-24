@@ -10,7 +10,8 @@ class PostsController < ApplicationController
     end
 
     def filter
-        posts = filtered_posts(params[:id])
-        render json: posts
+        posts = Post.filtered_posts(params[:id])
+        # puts posts
+        render json: posts, include: :category
     end
 end
