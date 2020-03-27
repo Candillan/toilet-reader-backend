@@ -20,6 +20,11 @@ class PostViewsController < ApplicationController
         render json: post_view
     end
 
+    def destroy
+        post_view = PostView.find(params[:id])
+        post_view.destroy
+    end
+
     private 
 
     def post_view_params

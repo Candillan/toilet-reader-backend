@@ -3,4 +3,5 @@ class User < ApplicationRecord
     has_many :posts, through: :post_views
     has_many :interests
     has_many :categories, through: :interests
+    has_many :comments
 end
