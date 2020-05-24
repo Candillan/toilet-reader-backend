@@ -10,4 +10,4 @@ This application uses a React Native frontend and a Ruby on Rails API backend.
 React Native is a Javascript-based library specially geared towards universal mobile platform compatibility.
 Additionally, the backend uses a PostgreSQL relational database for storing all of the posts, likes, and categories that users have subscribed to.
 
-A link to the frontend can be found here: https://github.com/Candillan/bathroom-reads-backend
+A link to the frontend can be found here: https://github.com/Candillan/bathroom-reads-frontend
